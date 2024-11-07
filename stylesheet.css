@@ -1,0 +1,234 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    color: #39393a;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    background-image: url("images/background.png");
+}
+
+nav {
+    background-color: #007bff;
+    padding: 15px 20px;
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #000; /* Navigation link text color */
+    text-decoration: none;
+    padding: 8px 18px;
+    margin: 0 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(91, 71, 163, 0.24);
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    background-color: #c1dbf7;
+    color: #fff;
+    border: none;
+}
+
+.business-card {
+    width: 100%;
+    font-family: 'Garamond', serif;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f2f7fd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.business-card p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.business-card p:first-of-type {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.job-listing {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif; 
+  }
+  /* ... other CSS rules ... */
+
+.job-listing p span.salary-amount { /* Style the salary amount */
+   
+    padding: 3px 5px; /* Add some padding for visual separation */
+    border-radius: 3px; /* Add rounded corners */
+    font-weight: bold;
+  }
+  .job-listing h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px; 
+    margin-top: 0; 
+  }
+  
+  .job-listing p {
+    margin-bottom: 8px; 
+    text-align: left;
+    line-height: 1.4; 
+    font-size: 14px; 
+  }
+  
+  .job-listing a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; 
+    font-size: 14px; 
+  }
+
+.styled-button {
+    background-color: #ced1e0; /* Example background color */
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 960px;
+    margin: 30px auto 30px; /* Adjust the top margin here */
+}
+
+.left-container,
+.right-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-container {
+    text-align: center;
+    order: 1;
+    margin-right: 10px; /* Space between left and right containers */
+
+}
+
+.right-container {
+    text-align: left;
+    order: 2;
+}
+
+.left-container img {
+    width: 100%;
+    max-width: 210px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 5px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(250, 241, 244);
+    margin-bottom: 30px;
+}
+
+main {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.3em;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #007bff;
+}
+
+h4 {
+    font-size: 1.1em;
+    margin-top: 5px;
+    font-weight: 600;
+    color: #007bff;
+
+}
+
+h5 {
+    font-size: 1.1em;
+    margin-top: 5px;
+    font-weight: 600;
+    text-align: center;
+    color: #007bff;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .left-container {
+        width: 25%;
+    }
+
+    .right-container {
+        width: 75%;
+    }
+}
+
+.navbar-toggler {
+    background-color: #007bff;
+    color: #007bff;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+    }
+
+    .navbar-collapse.show .navbar-nav {
+        display: block;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korma</title>
+  <link rel="icon" href="images/icons8-doctor-16.png" type="image/png">
+  <style>
+    body { 
+      margin: 0; 
+      font-family: sans-serif; 
+    }
+
+    header {
+      background-color: #f2f2f2; 
+      padding: 20px; 
+      text-align: left;
+    }
+
+    header h1 {
+      margin: 0; 
+    }
+
+    header h3 {
+      margin: 10px 0; 
+      display: inline-block; 
+      margin-right: 20px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .recipe {
+      /* No need for overflow: hidden anymore */
+    }
+
+    .container {
+      width: 100%; /* Each container takes full width */
+      box-sizing: border-box; 
+      padding: 20px;
+    }
+
+    .left {
+      background-color: #f9f3e6; 
+    }
+
+    .right {
+      background-color: #f9f3e6; 
+    }
+
+    img {
+      display: block;
+      margin: 0 auto; 
+      max-width: 100%; 
+      height: auto;  /* Maintain aspect ratio */
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 100%;
+        padding: 10px; /* Adjust padding for smaller screens */
+      }
+
+      /* Consider adding more styles here for better mobile layout */
+      .left, .right {
+        width: 100%; /* Stack containers vertically */
+        margin-bottom: 20px; 
+      } 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2><a href="https://docs.google.com/document/d/1WtmgWnQ1Px8g8invng9tRBJOTflKzHyr24pXpuLGcEA/edit?usp=sharing">Home Page</a></h2>
+    <h3><a href="https://docs.google.com/document/d/1WtmgWnQ1Px8g8invng9tRBJOTflKzHyr24pXpuLGcEA/edit?usp=sharing">Briyani</a></h3>
+    <h3><a href="https://docs.google.com/document/d/1WtmgWnQ1Px8g8invng9tRBJOTflKzHyr24pXpuLGcEA/edit?usp=sharing">Chicken 65</a></h3>
+    <h3><a href="https://docs.google.com/document/d/1WtmgWnQ1Px8g8invng9tRBJOTflKzHyr24pXpuLGcEA/edit?usp=sharing">Chicken Massla</a></h3> 
+  </header>
+
+  <main>
+    <section class="recipe">
+      <div class="container left">
+        <h3>Chicken Korma</h3>
+        <h3>Ingredients</h3> 
+        <img src="images/1CK.png" alt="Ingredients for Chicken Korma"> 
+      </div>
+
+      <div class="container right">
+        <h3>Cooking Instructions</h3>
+        <img src="images/2CK.png" alt="Instructions for Chicken Korma"> 
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+</body>
+</html>
