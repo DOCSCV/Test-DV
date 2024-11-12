@@ -1,12 +1,12 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     margin: 0;
-    color: #39393a;
+    color: #575763;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-    background-image: url("images/background.png");
+
 }
 
 nav {
@@ -36,7 +36,7 @@ nav a:hover {
 }
 
 nav a.active {
-    background-color: #c1dbf7;
+    background-color: #5792d1;
     color: #fff;
     border: none;
 }
@@ -64,6 +64,24 @@ nav a.active {
     margin-bottom: 15px;
 }
 
+.filter-options {
+    display: flex;
+    justify-content: space-around; 
+    margin-bottom: 20px;
+  }
+  
+  .filter-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0; 
+    cursor: pointer;
+  }
+  
+  .filter-button.active {
+    background-color: #007bff; 
+    color: white;
+  }
 .job-listing {
     border: 1px solid #ccc;
     padding: 15px;
@@ -71,41 +89,161 @@ nav a.active {
     margin-bottom: 20px;
     font-family: Arial, sans-serif; 
   }
-  /* ... other CSS rules ... */
-
-.job-listing p span.salary-amount { /* Style the salary amount */
-   
-    padding: 3px 5px; /* Add some padding for visual separation */
-    border-radius: 3px; /* Add rounded corners */
-    font-weight: bold;
-  }
-  .job-listing h4 {
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 18px; 
-    margin-top: 0; 
-  }
-  
-  .job-listing p {
-    margin-bottom: 8px; 
-    text-align: left;
-    line-height: 1.4; 
-    font-size: 14px; 
-  }
-  
-  .job-listing a {
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
+  .job-listing {
+    border: 1px solid #ccc;
+    padding: 15px;
     border-radius: 5px;
-    margin-top: 10px; 
-    font-size: 14px; 
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   }
+  
+  .job-details p {
+    text-align: left;
+    margin-bottom: 10px; /* Add space between paragraphs */
+  }
+  
+  .job-details b { 
+    font-weight: bold; /* Ensure bold text is actually bold */
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    color: #5d5d61;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  
+  nav {
+    background-color: #007bff;
+    padding: 15px 20px;
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ... (rest of your existing CSS rules) ... */
+  
+  .rating {
+    margin-bottom: 10px; /* Reduced spacing between rating sections */
+  }
+  
+  .rating-label { 
+    font-weight: bold; 
+    margin-right: 5px; /* Reduced spacing */
+    display: block; 
+    margin-bottom: 3px; /* Reduced spacing */
+    font-size: 14px; /* Smaller font size */
+  }
+  
+  .rating-stars {
+    display: inline-flex; 
+    cursor: pointer;
+    margin-bottom: 5px; /* Reduced spacing */
+  }
+  
+  .rating-stars i {
+    font-size: 1.2em; /* Significantly smaller star size */
+    color: #ccc; 
+    margin-right: 3px; /* Reduced spacing */
+  }
+  
+  .rating-stars i:hover,
+  .rating-stars i.selected {
+    color: gold; 
+  }
+  
+  .all-ratings-section { 
+    text-align: center;
+    margin-bottom: 10px; /* Reduced spacing */
+  }
+  
+  #show-all-ratings {
+    background-color: #e0e0e0; 
+    color: #686565; 
+    padding: 4px 8px; 
+    border: none;
+    border-radius: 15px; 
+    cursor: pointer;
+    font-weight: 500; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease; 
+    font-size: 12px; 
+    display: block;        /* Make the button a block-level element */
+    margin-left: 0;      /* Remove any auto margin */
+    margin-right: auto;  /* Remove any auto margin */ 
+  }
+  
+  .cme-opportunity {
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .cme-opportunity img { 
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 10px; 
+  }
+  
+  .cme-opportunity .content h3 {
+    margin-top: 15px; 
+  }
+  .cme-opportunity .content {
+    flex-grow: 1;
+    text-align: left; 
+    margin-left: 20px; 
+    padding: 10px; 
+    line-height: 1.6;
+    border-left: 1px solid #eee; 
+  }
+  
+  .cme-opportunity .price { 
+    font-weight: bold;
+    margin-bottom: 10px; 
+
+  }
+  
+  #cme-form button[type="submit"] {
+    background-color: #9fa3a8; 
+    color: rgb(12, 12, 12);
+    padding: 8px 15px;  
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    font-weight: bold;
+    display: block; 
+    margin-top: 20px; 
+    margin-left: auto; 
+    margin-right: auto;
+    width: auto; 
+    font-size: 15px; 
+    margin-bottom: 30px; /* Added margin-bottom to create space */ 
+  }
+  
+  /* ... rest of your existing CSS rules ... for show job offer button  */
+  .btn-primary {
+    background-color: #878a94; /* Example background color */
+    margin-top: 20px; /* Adjust the value as needed */
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
 
 .styled-button {
-    background-color: #ced1e0; /* Example background color */
+    background-color: #6e6e70; /* Example background color */
     color: rgb(0, 0, 0);
     padding: 10px 20px;
     border: none;
@@ -156,8 +294,7 @@ nav a.active {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: rgb(250, 241, 244);
+    
     margin-bottom: 30px;
 }
 
@@ -231,4 +368,35 @@ h5 {
     .navbar-collapse.show .navbar-nav {
         display: block;
     }
+}
+/* Future Emplyee */
+#job-submission {
+  text-align: left; 
+  padding: 50px; 
+}
+
+#job-submission p {
+  margin-bottom: 20px; 
+}
+
+.btn-home {
+  display: inline-block; 
+  padding: 6px 18px; 
+  background-color: #007bff; 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 5px; 
+  text-align: left;
+}
+
+#home-link {
+  text-align: left;
+}
+
+/* Add this for the horizontal line */
+#job-submission hr {
+  margin-top: 20px; /* Adjust spacing as needed */
+  margin-bottom: 20px; /* Adjust spacing as needed */
+  border: 0;
+  border-top: 1px solid #eee; /* You can adjust the color and thickness */
 }
