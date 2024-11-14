@@ -1,5 +1,5 @@
 const cmeOpportunities = [
-    {
+  {
       title: 'CME Conference - Waikiki, Hawaii - Dec 4-7, 2024',
       description: 'Hospital Medicine Update - LIVE STREAM',
       price: '$995.00 USD',
@@ -7,9 +7,9 @@ const cmeOpportunities = [
       details: `
           <p>Learn the latest advancements in hospital medicine.</p>
           <p>Network with colleagues and experts in a tropical paradise.</p>
-        `
-    },
-    {
+      `
+  },
+  {
       title: 'CME Conference - Waikiki, Hawaii - April 9-12, 2025',
       description: 'Outpatient Medicine Update',
       price: '$1,095.00 USD',
@@ -17,9 +17,9 @@ const cmeOpportunities = [
       details: `
           <p>Enhance your outpatient skills with expert-led sessions.</p> 
           <p>Explore the vibrant city of Waikiki during your free time.</p> 
-        `
-    },
-    {
+      `
+  },
+  {
       title: 'CME Conference - Waikiki, Hawaii - Dec 3-6, 2025',
       description: 'Hospital Medicine Update',
       price: '$1,095.00 USD',
@@ -27,53 +27,52 @@ const cmeOpportunities = [
       details: `
           <p>Stay at the forefront of hospital medicine with this cutting-edge conference.</p> 
           <p>Gain valuable knowledge and CME credits in a breathtaking setting.</p> 
-        `
-    }
-    // ... add more CME opportunities as needed
-  ];
-  
-  // Function to display CME results
-  function displayCmeResults() {
-    const resultsContainer = document.getElementById('cme-results');
-    resultsContainer.innerHTML = ''; // Clear previous results
-  
-    // TODO: Filter cmeOpportunities based on user input (from the form)
-  
-    // For now, display all opportunities (simulation)
-    cmeOpportunities.forEach(cme => {
-      // Create a new div for each CME opportunity
+      `
+  }
+  // ... add more CME opportunities as needed
+];
+
+// Function to display CME results
+function displayCmeResults() {
+  const resultsContainer = document.getElementById('cme-results');
+  resultsContainer.innerHTML = ''; // Clear previous results
+
+  // TODO: Filter cmeOpportunities based on user input (from the form)
+
+  // For now, display all opportunities (simulation)
+  cmeOpportunities.forEach(cme => {
       const cmeDiv = document.createElement('div');
-      cmeDiv.className = 'cme-opportunity'; // Add a class for styling if needed
-  
-      // Construct the HTML content for the CME opportunity (without the <img> tag)
+      cmeDiv.className = 'cme-opportunity';
+
       const cmeElement = `
           <h3>${cme.title}</h3>
           <p>${cme.description}</p>
           <p class="price">${cme.price}</p>
           ${cme.details} 
           <a href="${cme.link}" target="_blank" class="btn btn-primary">Learn More</a> 
-        `;
-  
-      // Add the HTML content to the div
+      `;
+
       cmeDiv.innerHTML = cmeElement;
-  
-      // Append the div to the results container
       resultsContainer.appendChild(cmeDiv);
-    });
-  }
-  
-  // ... (rest of your JavaScript code) ...
-  
-  // Form submission handler 
-  const cmeForm = document.getElementById('cme-form');
-  cmeForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    displayCmeResults(); // Call the function to display results on submit
   });
-  
-  // --- Rating Stars Functionality ---
-  const ratingStars = document.querySelectorAll('.rating-stars i');
-  
+}
+
+// --- Toggle CME Results Visibility ---
+const findCmeButton = document.getElementById('cme-form').querySelector('button[type="submit"]');
+const cmeResultsDiv = document.getElementById('cme-results');
+
+findCmeButton.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  if (cmeResultsDiv.style.display === 'none' || cmeResultsDiv.style.display === '') {
+      cmeResultsDiv.style.display = 'block';
+      findCmeButton.textContent = 'Hide CME Results';
+      displayCmeResults(); // Display results when shown
+  } else {
+      cmeResultsDiv.style.display = 'none';
+      findCmeButton.textContent = 'Find CME\'s';
+  }
+});
   ratingStars.forEach(star => {
     star.addEventListener('click', () => {
       const rating = star.dataset.rating;
@@ -92,3 +91,21 @@ const cmeOpportunities = [
     // TODO: Add logic to select all ratings
     console.log("Show all ratings clicked");
   });
+  $(function() {
+    $("#date-range").daterangepicker({
+        autoUpdateInput: false, // Prevent automatic input update
+        locale: {
+            cancelLabel: 'Clear' // Customize the cancel button text
+        }
+    });
+
+    // Handle date selection
+    $('#date-range').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+    });
+
+    // Handle date clearing
+    $('#date-range').on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+    });
+});
