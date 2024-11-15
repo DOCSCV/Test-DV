@@ -91,21 +91,4 @@ findCmeButton.addEventListener('click', (event) => {
     // TODO: Add logic to select all ratings
     console.log("Show all ratings clicked");
   });
-  $(function() {
-    $("#date-range").daterangepicker({
-        autoUpdateInput: false, // Prevent automatic input update
-        locale: {
-            cancelLabel: 'Clear' // Customize the cancel button text
-        }
-    });
-
-    // Handle date selection
-    $('#date-range').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-    });
-
-    // Handle date clearing
-    $('#date-range').on('cancel.daterangepicker', function(ev, picker) {
-        $(this).val('');
-    });
-});
+  
